@@ -64,9 +64,9 @@ func (pr *ProductRepo) UpdateProduct(productId int, Product models.Product) (mod
 
 func (pr *ProductRepo) DeleteProduct(productId int) error {
 	err := pr.db.Exec(`
-	DELETE Products
-	FROM Products
-	WHERE Products.id = ?`, productId).Error
+	DELETE products
+	FROM products
+	WHERE products.id = ?`, productId).Error
 
 	return err
 }
